@@ -29,7 +29,7 @@ const form_weather = document.getElementById('weather_form');
 form_weather.addEventListener('submit',(e)=>{
     e.preventDefault();
     console.log("submit event listner working properly");
-    fetch(`http://localhost:3000/weather?address=${document.getElementById('wi01').value}`).then((response)=>
+    fetch(`/weather?address=${document.getElementById('wi01').value}`).then((response)=>
     {
     response.json().then((data)=>{
         if(data.error){

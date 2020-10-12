@@ -5,7 +5,7 @@ const { response } = require('express');
 const app = express();
 const weather_module = require('./utils/weather');
 const geocoding = require('./utils/geocode');
-
+const port = process.env.PORT || 3000;
 
 
 //path names 
@@ -64,6 +64,6 @@ app.get('/weather', (req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log("Port 3000 has started");
+app.listen(port,()=>{
+    console.log(`Port ${port} has started`);
 });
